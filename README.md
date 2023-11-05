@@ -9,3 +9,11 @@ WT9011DCL
 ESP32 module:  
 FCC ID: 2AC7Z-ESPWROOM32
 
+
+Other Infomation:  
+Jetson Xavier Nx   
+Ubuntu 20.04.6 LTS  
+
+ROS2 foxy  
+ROS_PYTHON_VERSION=3  
+ 

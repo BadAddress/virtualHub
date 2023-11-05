@@ -15,6 +15,11 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+
+find_library(TINYB_LIBRARY NAMES tinyb)
+
+
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -36,6 +41,13 @@ endif()
 
 
 add_executable(virtual_hub_node src/virtual_hub_node.cpp)
+target_link_libraries(virtual_hub_node
+  ${TINYB_LIBRARY}
+  # Other libraries you might need to link with, for example:
+  # rclcpp::rclcpp if you are using ROS2 rclcpp
+)
+
+
 ament_target_dependencies(virtual_hub_node rclcpp)
 install(TARGETS
   virtual_hub_node

@@ -26,6 +26,6 @@ colcon build --packages-select virtual_hub
 
 # 如果需要，也可以加载构建后的环境
 # echo "Sourcing the built package..."
-# source $WORKSPACE_DIR/install/setup.bash
+source $WORKSPACE_DIR/install/setup.bash
 
 echo "Build complete."

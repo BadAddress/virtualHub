@@ -1,4 +1,10 @@
 #include "rclcpp/rclcpp.hpp"
+#include <tinyb.hpp>
+#include <iostream>
+using namespace std;
+
+
+
 
 class VirtualHub : public rclcpp::Node
 {
@@ -11,6 +17,10 @@ public:
 
 int main(int argc, char *argv[])
 {
+
+
+    cout<<"hello world~"<<endl;
+
     rclcpp::init(argc, argv);
     auto node = std::make_shared<VirtualHub>();
     rclcpp::spin(node);
