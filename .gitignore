@@ -1,0 +1,16 @@
+# Ignore build and install directories
+build/
+install/
+
+# Ignore all log files
+log/
+
+# Ignore other files that should not be committed
+*~
+*.bak
+.DS_Store
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
